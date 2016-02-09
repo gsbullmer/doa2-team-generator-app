@@ -3,7 +3,227 @@ name: home
 url: /
 ---
 
-<div class="grid-container">
-  <h1>Welcome to Foundation for Apps!</h1>
-  <p class="lead">This is version <strong>1.2 Eiger</strong>.</p>
+<form id='fForm' onsubmit="return false;">
+  <h2>Setup Options</h2>
+
+  <fieldset name="required">
+    <legend>Required</legend>
+    <span>Number of Teams:</span>
+      <select name="numTeams" required >
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <span>Characters per Team: </span>
+    <input type="number" name="numChars" min="1" max="99" maxlength="2" size="2" step="1" value="8" required />
+
+    <span>Draft Type: </span>
+    <select id="draft_type" name="draft" required >
+      <option value="standard">Standard</option>
+      <option value="pure" selected>Pure</option>
+      <option value="draft">Draft</option>
+    </select>
+
+    <span>Extra Characters: </span>
+    <input type="number" name="numXChars" min="0" max="99" maxlength="2" size="2" step="1" value="4" disabled />
+  </fieldset>
+
+  <fieldset name="set">
+    <legend>Set</legend>
+    <input type="checkbox" name="set" id="basic" value="Basic" checked />
+    <label for="basic">Basic</label>
+    <input type="checkbox" name="set" id="master" value="Master" checked />
+    <label for="master">Master</label>
+  </fieldset>
+
+  <fieldset name="ageSet">
+    <legend>Age &amp; Setting</legend>
+    <table>
+      <tbody>
+        <tr>
+          <th>Age</th>
+          <th colspan="3">Setting</th>
+        </tr>
+        <tr>
+          <td class="age">
+            <input type="checkbox" name="age" id="a1" value="Ancient" class="setting-checkbox" checked />
+            <label for="a1">Ancient</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s11" value="Epic Heroes" class="setting-checkbox" checked />
+            <label for="s11"><img src="./assets/img/setting/EpicHeroes.png"/> Epic Heroes</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s12" value="Faer" class="setting-checkbox" checked />
+            <label for="s12"><img src="./assets/img/setting/Faer.png"/> Faer</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s13" value="Chasms" class="setting-checkbox" checked />
+            <label for="s13"><img src="./assets/img/setting/Chasm.png"/> Chasms</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="age">
+            <input type="checkbox" name="age" id="a2" value="Colonial" class="setting-checkbox" checked />
+            <label for="a2">Colonial</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s21" value="Lands West" class="setting-checkbox" checked />
+            <label for="s21"><img src="./assets/img/setting/LandsWest.png"/> Lands West</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s22" value="Folktales" class="setting-checkbox" checked />
+            <label for="s22"><img src="./assets/img/setting/Folktales.png"/> Folktales</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s23" value="Horizons" class="setting-checkbox" checked />
+            <label for="s23"><img src="./assets/img/setting/Horizons.png"/> Horizons</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="age">
+            <input type="checkbox" name="age" id="a3" value="Modern" class="setting-checkbox" checked />
+            <label for="a3">Modern</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s31" value="Age of Crisis" class="setting-checkbox" checked />
+            <label for="s31"><img src="./assets/img/setting/AgeOfCrisis.png"/> Age of Crisis</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s32" value="The Underground" class="setting-checkbox" checked />
+            <label for="s32"><img src="./assets/img/setting/Underground.png"/> The Underground</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s33" value="Strange Times" class="setting-checkbox" checked />
+            <label for="s33"><img src="./assets/img/setting/StrangeTimes.png"/> Strange Times</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="age">
+            <input type="checkbox" name="age" id="a4" value="Future" class="setting-checkbox" checked />
+            <label for="a4">Future</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s41" value="Altspace" class="setting-checkbox" checked />
+            <label for="s41"><img src="./assets/img/setting/Altspace.png"/> Altspace</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s42" value="Starmarch" class="setting-checkbox" checked />
+            <label for="s42"><img src="./assets/img/setting/Starmarch.png"/> Starmarch</label>
+          </td>
+          <td class="setting">
+            <input type="checkbox" name="setting" id="s43" value="Forty Worlds" class="setting-checkbox" checked />
+            <label for="s43"><img src="./assets/img/setting/FortyWorlds.png"/> Forty Worlds</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+  <fieldset name="circle">
+    <legend>Circle</legend>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <input type="checkbox" name="circle" id="adventurer" value="Adventurer" checked />
+            <label for="adventurer"><img src="./assets/img/circle/adventurers.png"/> Adventurer</label>
+          </td>
+          <td>
+            <input type="checkbox" name="circle" id="commoner" value="Commoner" checked />
+            <label for="commoner"><img src="./assets/img/circle/commoners.png"/> Commoner</label>
+          </td>
+          <td>
+            <input type="checkbox" name="circle" id="defender" value="Defender" checked />
+            <label for="defender"><img src="./assets/img/circle/defenders.png"/> Defender</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="circle" id="exemplar" value="Exemplar" checked />
+            <label for="exemplar"><img src="./assets/img/circle/exemplars.png"/> Exemplar</label>
+          </td>
+          <td>
+            <input type="checkbox" name="circle" id="icon" value="Icon" checked />
+            <label for="icon"><img src="./assets/img/circle/icons.png"/> Icon</label>
+          </td>
+          <td>
+            <input type="checkbox" name="circle" id="lord" value="Lord" checked />
+            <label for="lord"><img src="./assets/img/circle/lords.png"/> Lord</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="circle" id="outcast" value="Outcast" checked />
+            <label for="outcast"><img src="./assets/img/circle/outcasts.png"/> Outcast</label>
+          </td>
+          <td>
+            <input type="checkbox" name="circle" id="villain" value="Villain" checked />
+            <label for="villain"><img src="./assets/img/circle/villains.png"/> Villain</label>
+          </td>
+          <td>
+            <input type="checkbox" name="circle" id="warrior" value="Warrior" checked />
+            <label for="warrior"><img src="./assets/img/circle/warriors.png"/> Warrior</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+  <fieldset name="nature">
+    <legend>Nature</legend>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <input type="checkbox" name="nature" id="man" value="Man" checked />
+            <label for="man"><img src="./assets/img/nature/man.png"/> Man</label>
+          </td>
+          <td>
+            <input type="checkbox" name="nature" id="woman" value="Woman" checked />
+            <label for="woman"><img src="./assets/img/nature/woman.png"/> Woman</label>
+          </td>
+          <td>
+            <input type="checkbox" name="nature" id="child" value="Child" checked />
+            <label for="child"><img src="./assets/img/nature/child.png"/> Child</label>
+          </td>
+          <td>
+            <input type="checkbox" name="nature" id="being" value="Being" checked />
+            <label for="being"><img src="./assets/img/nature/being.png"/> Being</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="nature" id="fairy" value="Fairy" checked />
+            <label for="fairy"><img src="./assets/img/nature/fairy.png"/> Fairy</label>
+          </td>
+          <td>
+            <input type="checkbox" name="nature" id="fiend" value="Fiend" checked />
+            <label for="Fiend"><img src="./assets/img/nature/fiend.png"/> Fiend</label>
+          </td>
+          <td>
+            <input type="checkbox" name="nature" id="machine" value="Machine" checked />
+            <label for="machine"><img src="./assets/img/nature/machine.png"/> Machine</label>
+          </td>
+          <td>
+            <input type="checkbox" name="nature" id="holy" value="Holy" checked />
+            <label for="holy"><img src="./assets/img/nature/holy.png"/> Holy</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+  <button type="button" id="submit_form">Draft Teams</button>
+
+</form>
+
+<div id='tOutput' class='teamOutput'>
+  <h2>Teams</h2>
+  <table>
+    <tr id="header"></tr>
+    <tr id="teams"></tr>
+  </table>
+  <button type="button" id="reset_button">Reset Teams</button>
 </div>

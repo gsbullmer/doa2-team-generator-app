@@ -1,4 +1,25 @@
-# Foundation for Apps Template
+# Duel of Ages 2: Team Builder
+
+This application is a team building application for the tabletop game [Duel of Ages II](http://www.duelofages.com). Once everyone has decided on the scenario that they want to play in, you can configure this tool to generate teams based on that criteria. You can configure the following options with this application:
+
+Team Setup
+--------
+- Number of Teams
+- Characters Per Team
+- Draft Type
+- Extra Characters
+
+Session Settings
+----------------
+- Game Sets Available (Basic or Master)
+- Available Ages
+- Available Settings
+- Available Circles
+- Available Natures
+
+Once you have configured your settings for how you want to play this round, click the 'Draft Teams' button. The app will do the rest: assigning you and the other players characters from the available pool. You will get a list of the charcter's name and id number to help you locate their corresponding card and token.
+
+## Foundation for Apps Template
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-apps-template/dev-status.svg)](https://david-dm.org/zurb/foundation-apps-template#info=devDependencies)
 
@@ -6,7 +27,7 @@ This is the default template project for Foundation for Apps, powered by Gulp, A
 
 If you're already an Angular developer, you may instead want to install the components into your own stack using Bower: `bower install foundation-apps`
 
-## Requirements
+### Requirements
 
 You'll need the following software installed to get started.
 
@@ -16,7 +37,7 @@ You'll need the following software installed to get started.
   - [Gulp](http://gulpjs.com/) and [Bower](http://bower.io): Run `npm install -g gulp bower`
     - Depending on how Node is configured on your machine, you may need to run `sudo npm install -g gulp bower` instead, if you get an error with the first command.
 
-## Get Started
+### Get Started
 
 Clone this repository, where `app` is the name of your app.
 
