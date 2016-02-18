@@ -1,0 +1,301 @@
+---
+name: setup
+url: /setup
+---
+
+<form id='settingsForm' onsubmit="">
+  <h2 class="text-center">Setup Options</h2>
+
+  <div class="grid-block">
+    <div class="grid-content large-2">
+      <basic></basic>
+      <set></set>
+    </div>
+
+    <div class="grid-content large-6">
+      <age-setting ng-repeat="age in [1,2,3,4]"></age-setting>
+    </div>
+
+    <div class="grid-content large-4">
+      <circle></circle>
+      <nature></nature>
+    </div>
+    <!-- <div class="vertical grid-block">
+      <div class="card">
+        <div class="card-divider">
+          <h4>Required</h4>
+        </div>
+
+        <div class="card-section">
+          <span>Number of Teams:</span>
+            <select name="numTeams" required >
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+          <span>Characters per Team: </span>
+          <input type="number" name="numChars" min="1" max="99" maxlength="2" size="2" step="1" value="8" required />
+
+          <span>Draft Type: </span>
+          <select id="draft_type" name="draft" required >
+            <option value="standard">Standard</option>
+            <option value="pure" selected>Pure</option>
+            <option value="draft">Draft</option>
+          </select>
+
+          <span>Extra Characters: </span>
+          <input type="number" name="numXChars" min="0" max="99" maxlength="2" size="2" step="1" value="4" disabled />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-divider">
+          <h4>Set</h4>
+        </div>
+
+        <div class="card-section">
+          <input type="checkbox" name="set" id="basic" value="Basic" checked />
+          <label for="basic">Basic</label>
+          <input type="checkbox" name="set" id="master" value="Master" checked />
+          <label for="master">Master</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-block">
+      <div class="grid-content">
+        <div class="card">
+          <div class="card-divider">
+            <h4>Age &amp; Setting</h4>
+          </div>
+          <div class="card-section">
+
+            <div class="grid-content">
+
+              <div class="age text-center">
+                <input type="checkbox" name="age" id="a1" value="Ancient" class="setting-checkbox" checked />
+                <label for="a1">Ancient</label>
+              </div>
+
+              <div class="setting grid-block">
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s11" value="Epic Heroes" class="setting-checkbox" checked />
+                  <label for="s11"><img src="./assets/img/setting/EpicHeroes.png"/> Epic Heroes</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s12" value="Faer" class="setting-checkbox" checked />
+                  <label for="s12"><img src="./assets/img/setting/Faer.png"/> Faer</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s13" value="Chasms" class="setting-checkbox" checked />
+                  <label for="s13"><img src="./assets/img/setting/Chasm.png"/> Chasms</label>
+                </div>
+              </div>
+
+            </div>
+
+            <hr/>
+
+            <div class="grid-content">
+
+              <div class="age text-center">
+                <input type="checkbox" name="age" id="a2" value="Colonial" class="setting-checkbox" checked />
+                <label for="a2">Colonial</label>
+              </div>
+
+              <div class="setting grid-block">
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s21" value="Lands West" class="setting-checkbox" checked />
+                  <label for="s21"><img src="./assets/img/setting/LandsWest.png"/> Lands West</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s22" value="Folktales" class="setting-checkbox" checked />
+                  <label for="s22"><img src="./assets/img/setting/Folktales.png"/> Folktales</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s23" value="Horizons" class="setting-checkbox" checked />
+                  <label for="s23"><img src="./assets/img/setting/Horizons.png"/> Horizons</label>
+                </div>
+              </div>
+
+            </div>
+
+            <hr/>
+
+            <div class="grid-content">
+
+              <div class="text-center age">
+                <input type="checkbox" name="age" id="a3" value="Modern" class="setting-checkbox" checked />
+                <label for="a3">Modern</label>
+              </div>
+
+              <div class="setting grid-block">
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s31" value="Age of Crisis" class="setting-checkbox" checked />
+                  <label for="s31"><img src="./assets/img/setting/AgeOfCrisis.png"/> Age of Crisis</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s32" value="The Underground" class="setting-checkbox" checked />
+                  <label for="s32"><img src="./assets/img/setting/Underground.png"/> The Underground</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s33" value="Strange Times" class="setting-checkbox" checked />
+                  <label for="s33"><img src="./assets/img/setting/StrangeTimes.png"/> Strange Times</label>
+                </div>
+              </div>
+
+            </div>
+
+            <hr/>
+
+            <div class="grid-content">
+
+              <div class="text-center age">
+                <input type="checkbox" name="age" id="a4" value="Future" class="setting-checkbox" checked />
+                <label for="a4">Future</label>
+              </div>
+
+              <div class="setting grid-block">
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s41" value="Altspace" class="setting-checkbox" checked />
+                  <label for="s41"><img src="./assets/img/setting/Altspace.png"/> Altspace</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s42" value="Starmarch" class="setting-checkbox" checked />
+                  <label for="s42"><img src="./assets/img/setting/Starmarch.png"/> Starmarch</label>
+                </div>
+
+                <div class="grid-content">
+                  <input type="checkbox" name="setting" id="s43" value="Forty Worlds" class="setting-checkbox" checked />
+                  <label for="s43"><img src="./assets/img/setting/FortyWorlds.png"/> Forty Worlds</label>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-block">
+      <div class="card grid-content">
+        <div class="card-divider">
+          <h4>Circle</h4>
+        </div>
+        <div class="card-section">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" name="circle" id="adventurer" value="Adventurer" checked />
+                  <label for="adventurer"><img src="./assets/img/circle/adventurers.png"/> Adventurer</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="circle" id="commoner" value="Commoner" checked />
+                  <label for="commoner"><img src="./assets/img/circle/commoners.png"/> Commoner</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="circle" id="defender" value="Defender" checked />
+                  <label for="defender"><img src="./assets/img/circle/defenders.png"/> Defender</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="circle" id="exemplar" value="Exemplar" checked />
+                  <label for="exemplar"><img src="./assets/img/circle/exemplars.png"/> Exemplar</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="circle" id="icon" value="Icon" checked />
+                  <label for="icon"><img src="./assets/img/circle/icons.png"/> Icon</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="circle" id="lord" value="Lord" checked />
+                  <label for="lord"><img src="./assets/img/circle/lords.png"/> Lord</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="circle" id="outcast" value="Outcast" checked />
+                  <label for="outcast"><img src="./assets/img/circle/outcasts.png"/> Outcast</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="circle" id="villain" value="Villain" checked />
+                  <label for="villain"><img src="./assets/img/circle/villains.png"/> Villain</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="circle" id="warrior" value="Warrior" checked />
+                  <label for="warrior"><img src="./assets/img/circle/warriors.png"/> Warrior</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-block">
+      <div class="card grid-content">
+        <div class="card-divider">
+          <h4>Nature</h4>
+        </div>
+
+        <div class="card-section">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" name="nature" id="man" value="Man" checked />
+                  <label for="man"><img src="./assets/img/nature/man.png"/> Man</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="nature" id="woman" value="Woman" checked />
+                  <label for="woman"><img src="./assets/img/nature/woman.png"/> Woman</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="nature" id="child" value="Child" checked />
+                  <label for="child"><img src="./assets/img/nature/child.png"/> Child</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="nature" id="being" value="Being" checked />
+                  <label for="being"><img src="./assets/img/nature/being.png"/> Being</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="nature" id="fairy" value="Fairy" checked />
+                  <label for="fairy"><img src="./assets/img/nature/fairy.png"/> Fairy</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="nature" id="fiend" value="Fiend" checked />
+                  <label for="Fiend"><img src="./assets/img/nature/fiend.png"/> Fiend</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="nature" id="machine" value="Machine" checked />
+                  <label for="machine"><img src="./assets/img/nature/machine.png"/> Machine</label>
+                </td>
+                <td>
+                  <input type="checkbox" name="nature" id="holy" value="Holy" checked />
+                  <label for="holy"><img src="./assets/img/nature/holy.png"/> Holy</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <button type="button" id="submit_form">Draft Teams</button> -->
+
+</form>
